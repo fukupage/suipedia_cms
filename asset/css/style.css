@@ -1,0 +1,94 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c);
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "M PLUS Rounded 1c";
+  font-size: 1.6em;
+}
+
+header {
+  background-color: #00deff;
+  height: 70px;
+  -webkit-box-shadow: 2px 2px 20px 20px rgba(200, 200, 200, 0.5);
+          box-shadow: 2px 2px 20px 20px rgba(200, 200, 200, 0.5);
+  margin-bottom: 30px;
+  padding: 10px;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+footer a,
+header a {
+  color: #fff;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+footer a:hover,
+header a:hover {
+  text-decoration: none;
+  color: slateblue;
+}
+
+h2 {
+  font-weight: 800;
+}
+
+aside,
+nav,
+section {
+  margin: 0px 5px 35px;
+}
+
+main > section {
+  background-color: #fbfbfb;
+  padding: 10px;
+}
+
+.editsub > div,
+aside,
+nav {
+  padding: 10px;
+  background-color: #fbfbfb;
+}
+
+.editsub > div {
+  margin-bottom: 10px;
+  font-size: 0.8rem;
+}
+
+section > h2 {
+  border-bottom: 3px #00deff solid;
+  padding: 2px;
+}
+
+section > p {
+  padding: 6px;
+}
+
+footer {
+  background-color: #00deff;
+  color: #fff;
+  height: 90px;
+  text-align: center;
+  padding: 2rem;
+}
+
+@media (max-width: 576px) {
+  /* スマホ等UI調整 */
+  .container,
+  .col-md-4,
+  .col-md-8 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  header a {
+    font-size: 1.5rem;
+    font-weight: 900;
+  }
+}
+/*# sourceMappingURL=style.css.map */
