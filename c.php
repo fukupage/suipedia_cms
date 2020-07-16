@@ -13,9 +13,9 @@
 		<section class="container">
 			<div class="row contents_list_wrap">
 				<?php
-				//	foreach(getDetailContentsList(NULL,true,true,NULL,6) as $contents){
-				//		include(getRoot()."/src/parts/contents_list.php");
-				//	}
+					foreach(getDetailContentsList(NULL,true,true,NULL,6) as $contents){
+						include(getRoot().$local_root."/src/parts/contents_list.php");
+					}
 				?>
 			</div>
 		</section>

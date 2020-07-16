@@ -10,7 +10,7 @@
           ?>
         </main>
         <?php
-        include_once(getRoot().$local_root.'src/parts/sub.php');
+        include_once(getRoot().$local_root.'/src/parts/sub.php');
         ?>
       </div>
     </section>

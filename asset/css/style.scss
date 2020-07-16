@@ -85,5 +85,78 @@ footer{
 
 }
 
+/* #7で追加 */
+.main_display_contents_list img{
+	width: 100% ;
+}
+.new_contents{
+	padding:0.8rem 0.8rem 1.0rem;
+	margin-bottom: 1.0rem;
+	transition:.2s;
+}
+.new_contents:hover{
+	box-shadow: 10px 5px 20px rgba(200,200,200,0.5),
+				-10px 5px 20px rgba(200,200,200,0.5);
+	background: #fff;
+}
+.new_mark{
+	position:absolute;
+	background:#fd0;
+	top: 0.8rem;
+	padding:0.3rem 0.4rem;
+}
+.news_create_date{
+	display: block;
+}
+li.new_contents{
+	list-style:none;
+	float:left;
+}
+
+.new_contents img{
+	width:30%;
+}
+
+.new_contents span{
+	padding-left: 1.0rem;
+}
+
+.new_contents a{
+	font-size: 1rem;
+	text-decoration: none;
+}
+
+.main_display_contents_list img{
+	width: 100% ;
+}
+
+
+.contents_list_wrap{
+	margin-top: 2.5rem;
+}
+
+section figure{
+	text-align: center;
+	margin: 3.0rem 0;
+}
+
+
+@media (max-width: 576px) {
+	.new_contents img{
+	  float:left;
+	  width:40%;
+	}
+	.new_contents span{
+		padding-left: 2%;
+	}
+	.new_mark{
+		left:0.8rem;
+	}
+}
+
+.side nav ul.ul_new_contents{
+	display: inline-block;
+	padding: 0px;
+}
 
 
