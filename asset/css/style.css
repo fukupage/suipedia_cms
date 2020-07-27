@@ -169,4 +169,9 @@ section figure {
   display: inline-block;
   padding: 0px;
 }
+
+input[type="checkbox"] {
+  width: 10%;
+  height: 20px;
+}
 /*# sourceMappingURL=style.css.map */

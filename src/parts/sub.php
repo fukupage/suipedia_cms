@@ -1,6 +1,6 @@
 <div class="col-md-4 side">
   <aside>
-    <h4>CMSの管理ページは<a href="/admin/">【こちら】</a></h4>
+    <h4>CMSの管理ページは<a href="http://localhost:8888/note/suipedia_cms/admin/">【こちら】</a></h4>
     <p>ご確認ください</p>
   </aside>
   <nav>

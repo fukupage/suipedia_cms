@@ -128,3 +128,74 @@ function getArchiveList()
   $result = $stmt->fetchAll();
   return $result;
 }
+
+    /* テーブルを全て取得する */
+    function getTableList(){
+      $sql = "SHOW TABLE STATUS LIKE 'org%'";
+      $stmt = getDbh()->prepare($sql);
+      $stmt->execute();
+      return $stmt->fetchAll();
+  }
+
+/* ページ情報を取得する */
+function getPageInformation(){
+	$sql="
+	 SELECT ".getContentsSelectItemsQuery()."
+	   FROM org_category category left outer join
+		org_contents contents on category.category_id = contents.category_id
+	  WHERE CONCAT(IFNULL(category.url, \"\"), IFNULL(contents.url, \"\")) LIKE :url";
+
+	$stmt = getDbh()->prepare($sql);
+	$url = getSmartRequest();
+	$stmt->bindParam(':url', $url, PDO::PARAM_STR);
+	$stmt->execute();
+	$result = $stmt->fetch(PDO::FETCH_ASSOC);
+	return $result;
+}
+
+	/* 整形されたURLのドメイン以降を取得する */
+	function getSmartRequest(){
+    $request = $_SERVER["REQUEST_URI"];
+		$request = str_replace("index.html","",$request);
+		if(strpos($request,'?')){
+			$request = strchr($request,'?',true);
+		}
+		return $request;
+	}
+
+	/* ページ情報からエンティティ名を取得する。主に管理ページで使用 */
+	function getEntityName($page){
+		return strchr($page["contents_url"],'/',true);
+	}
+
+  /* テーブルの列情報を全て取得する */
+  function getColumnList($table_name){
+    $sql = "SHOW FULL COLUMNS FROM ".$table_name;
+    $stmt = getDbh()->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetchAll();
+  }
+
+	/* テーブルの保持する情報を全て取得する */
+	function getEntityList($table_name){
+    $sql = "SELECT * FROM ".$table_name;
+		$stmt = getDbh()->prepare($sql);
+		$stmt->execute();
+		$result = $stmt->fetchAll();
+		return $result;
+  }
+
+  /* 指定された文字数以上なら３点リーダをつけて返す */
+  function getTrimString($string, $trimLength){
+    $count = mb_strlen($string);
+    $string = mb_substr($string ,0 ,$trimLength);
+    if($count > $trimLength){ $string = $string.'...'; }
+    return $string;
+  }
+
+  /* 登録日か更新日かを返す（登録時formに表示させない目的で使用） */
+function isAdminDateItem($target){
+	return strstr($target,'create_date') || strstr($target,'update_date');
+}
+
+?>

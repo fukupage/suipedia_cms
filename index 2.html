@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<?php
+/*
+【注意】
+MAMPで動作させる時以外は$local_rootに関するする項目は修正が必要
+*/
+  ini_set('display_errors', 1);
+  $webroot = $_SERVER['DOCUMENT_ROOT'];
+  $local_root = '/note/suipedia_cms'; //MAMP以外ではコメントアウト
+  include_once($webroot.$local_root.'/src/parts/temp.php');
+?>

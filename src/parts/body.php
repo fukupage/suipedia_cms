@@ -1,5 +1,5 @@
 <body>
-  <header><a href="/">Suipedia CMS</a></header>
+  <header><a href="/note/suipedia_cms/">Suipedia CMS</a></header>
   <div class="headerFlexBlock"></div>
   <div class="container-fluid">
     <section class="container">
@@ -16,10 +16,6 @@
     </section>
   </div>
   <footer>
-    <p>&copy;2020<a href="./">Suipedia CMS</a></p>
+    <p>&copy;2020<a href="/note/suipedia_cms/">Suipedia CMS</a></p>
   </footer>
-  <script src="asset/js/bootstrap.js"></script>
-  <script src="asset/js/autosize.min.js"></script>
-  <script src="asset/js/lightbox.js" type="text/javascript"></script>
-  <script src="asset/js/script.js"></script>
 </body>
